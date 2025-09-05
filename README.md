@@ -1,8 +1,2 @@
-docker run -it --privileged centos7_test /bin/bash
-
-bwrap \
-  --bind /root/debian / \
-  --dev /dev \
-  --proc /proc \
-  --ro-bind /sys /sys \
-  /bin/bash
+sudo arch-chroot CentOS-Stream-10/
+./proot/bin/proot -S CentOS-Stream-10 CentOS-Stream-10/root/venv/bin/python
